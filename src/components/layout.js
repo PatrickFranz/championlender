@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Layout = ({ children }) => {
-  return <>{children}</>;
-};
+  return <>{children}</>
+}
 
-export default Layout;
+export default Layout

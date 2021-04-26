@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Champion Lender website`,
-    description: `Champion Lender was created to help people find the best loan for them while saving them time and money.`,
-    author: `@@patrickfranz`,
+    title: `Champion Group website`,
+    description: `Champion Group Website for the group of Champion Companies.`,
+    author: `patrickfranz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/champion-logo.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/styles/Typography`,
+        pathToConfigModule: `src/styles/Typography.js`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

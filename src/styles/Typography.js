@@ -1,16 +1,19 @@
-import Typography from "typography"
+import Typography from 'typography'
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: '18px',
   baseLineHeight: 1.666,
-  headerFontFamily: [
-    "Avenir Next",
-    "Helvetica Neue",
-    "Segoe UI",
-    "Helvetica",
-    "Arial",
-    "sans-serif",
+  headerFontFamily: ['Open Sans', 'sans serif'],
+  bodyFontFamily: ['Lora', 'serif'],
+  googleFonts: [
+    {
+      name: 'Lora',
+      styles: [100, 200, 400, 600, 900],
+    },
+    {
+      name: 'Open Sans',
+      styles: [100, 200, 400, 600, 900],
+    },
   ],
-  bodyFontFamily: ["Georgia", "serif"],
 })
 export default typography
