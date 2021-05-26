@@ -9,11 +9,12 @@ const StyledFooter = styled.footer`
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 2rem;
-  color: var(--white);
+  padding: 20px 30px;
+  color: var(--copyright_text_color);
   background-color: var(--footer-background);
   margin: 8rem 0 0;
   border-top: 1px solid var(--primary);
+
   .CookieConsent {
     padding: 0 50px;
     color: var(--white);
@@ -25,44 +26,25 @@ const StyledFooter = styled.footer`
   }
 
   span {
-    font-size: 1rem;
+    font-size: 13px;
   }
 
   .links {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   & a,
   span > span {
-    color: var(--white);
-    text-decoration: underline;
-    text-underline-position: under;
+    text-decoration: underline !important;
+    text-underline-offset: 5px;
     cursor: pointer;
   }
 
-  button {
-    background: transparent;
-    border: none;
-    outline-color: var(--primary);
-    border-radius: 0;
-    border-bottom: 2px solid var(--white);
-    padding: 0;
-    padding-bottom: 2px;
-    transition: 250ms;
-    outline: none;
-    box-shadow: none;
-
-    &:hover,
-    &:active,
-    &:visited,
-    &:focus {
-      border: none;
-      border-bottom: 2px solid var(--white);
-      background-color: transparent;
-      outline: none;
-      box-shadow: none;
-    }
+  a:hover {
+    color: var(--secondary-gold);
   }
 
   @media (max-width: 670px) {
@@ -109,20 +91,22 @@ export default function Footer() {
         Reserved.
       </span>
       <span className="links centered">
-        <Button
+        <a
+          href="#ccpaModal"
           role="navigation"
           aria-label="CCPA Disclosure dialog"
           onClick={() => setShowCcpa(true)}
         >
           CCPA Disclosure
-        </Button>
-        <Button
+        </a>
+        <a
+          href="#cookieModal"
           role="navigation"
           aria-label="Cookie policy dialog"
           onClick={() => setShowCookie(true)}
         >
           Cookie Policy
-        </Button>
+        </a>
       </span>
       <span className="right">
         Developed by{' '}

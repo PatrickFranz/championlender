@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   --primary_color-5a: rgba(0,95,79,0.5);
   --primary_color-35a: rgba(0,95,79,0.35);
   --primary_color-2a: rgba(0,95,79,0.2);
+  --secondary-gold: #a58d4e;
   --menu_highlight_background: #65bc7b;
   --nav_typography-color: #09162a;
   --nav_typography-color-65a: rgba(9,22,42,0.65);
@@ -16,6 +17,9 @@ export const GlobalStyle = createGlobalStyle`
   --menu_hover_first_color: #005f4f;
   --menu_hover_first_color-65a: rgba(0,95,79,0.65);
   --mobile_menu_toggle_color: #005f4f;
+
+  --footer-background: #28303f;
+  --copyright_text_color: rgba(255,255,255,0.4);
 
   --menu-glyph-color-hover: #a58c4f;
 

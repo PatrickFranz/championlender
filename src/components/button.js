@@ -29,7 +29,7 @@ const StyledButton = styled.button`
   transition: all 250ms ease-in-out;
 
   &:hover {
-    background-color: var(--primary-darken);
+    background-color: var(--secondary-gold);
   }
   &:before {
     content: '';
