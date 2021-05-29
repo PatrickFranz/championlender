@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { Button } from 'react-bootstrap'
 import styled from 'styled-components'
-import CcpaModal from './CcpaModal'
-import CookieModal from './cookieModal'
+import CcpaModal from '../Modals/CcpaModal'
+import CookieModal from '../Modals/cookieModal'
 import CookieConsent from 'react-cookie-consent'
 
 const StyledFooter = styled.footer`
@@ -10,10 +9,9 @@ const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 20px 30px;
-  color: var(--copyright_text_color);
   background-color: var(--footer-background);
+  color: var(--copyright_text_color);
   margin: 8rem 0 0;
-  border-top: 1px solid var(--primary);
 
   .CookieConsent {
     padding: 0 50px;
@@ -38,6 +36,7 @@ const StyledFooter = styled.footer`
 
   & a,
   span > span {
+    color: var(--copyright_text_color);
     text-decoration: underline !important;
     text-underline-offset: 5px;
     cursor: pointer;
@@ -93,7 +92,6 @@ export default function Footer() {
       <span className="links centered">
         <a
           href="#ccpaModal"
-          role="navigation"
           aria-label="CCPA Disclosure dialog"
           onClick={() => setShowCcpa(true)}
         >
@@ -101,7 +99,6 @@ export default function Footer() {
         </a>
         <a
           href="#cookieModal"
-          role="navigation"
           aria-label="Cookie policy dialog"
           onClick={() => setShowCookie(true)}
         >

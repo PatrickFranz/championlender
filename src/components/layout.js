@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Footer from './footer'
-import HeaderNav from './headerNav'
+import Footer from './Footer/footer'
+import HeaderNav from './Nav/headerNav'
 
 const StyledLayout = styled.div`
   display: flex;
