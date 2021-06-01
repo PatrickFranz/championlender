@@ -52,4 +52,23 @@ a{
 h1, h2, h3, h4, h5, h6{
   margin: 0;
 }
+
+.small-heading {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  :after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid var(--secondary-gold);
+  }
+}
 `

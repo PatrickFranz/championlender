@@ -11,7 +11,7 @@ const StyledCopyBar = styled.div`
   padding: 20px 30px;
   background-color: var(--copyBar-background);
   color: var(--copyright_text_color);
-  margin: 8rem 0 0;
+  margin: 50px 0 0;
 
   .CookieConsent {
     padding: 0 50px;

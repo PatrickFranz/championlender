@@ -1,5 +1,177 @@
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
+import {
+  faEnvelope,
+  faHistory,
+  faMapMarkerAlt,
+  faPhoneAlt,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
+import { Col, Row } from 'react-bootstrap'
+import styled from 'styled-components'
 
+const StyledLinksBar = styled.div`
+  color: var(--white);
+  display: flex;
+  margin: 50px 100px 0;
+  padding: 0 50px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+
+  .col {
+    padding: 10px;
+
+    .row {
+      flex-wrap: nowrap;
+      align-items: baseline;
+      gap: 10px;
+      margin: 10px 0;
+
+      svg {
+        position: relative;
+        color: var(--secondary-gold);
+        top: 3px;
+        transition: all 250ms ease;
+      }
+
+      .social-icon {
+        font-size: 24px;
+        margin: 0 10px;
+
+        &:hover svg {
+          color: var(--primary-green);
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+
+      li {
+        font-family: 'Montserrat';
+        font-size: 15px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
+        padding: 0;
+        margin: 2px 0;
+      }
+    }
+  }
+`
 export default function FooterLinksBar() {
-  return <div></div>
+  return (
+    <StyledLinksBar>
+      <Col>
+        <div className="small-heading">COMPARE RATES THE SECURE WAY</div>
+        <p>
+          All data processed through Champion Lender is encrypted with the
+          latest 256-bit encryption technology.
+        </p>
+        <StaticImage src="../../images/SSL-white.png" alt="SSL Logo" />
+      </Col>
+      <Col>
+        <div className="small-heading">DISCLOSURES</div>
+        <ul>
+          <li>
+            <Link to="#">Definitions</Link>
+          </li>
+          <li>
+            <Link to="#">Terms of Service</Link>
+          </li>
+          <li>
+            <Link to="#">Advertising Disclosure</Link>
+          </li>
+          <li>
+            <Link to="#">Privacy Policy</Link>
+          </li>
+          <li>
+            <Link to="#">Unsubscribe</Link>
+          </li>
+          <li>
+            <Link to="#">California Consumer Privacy Act</Link>
+          </li>
+          <li>
+            <Link to="#">Premier Partners</Link>
+          </li>
+        </ul>
+      </Col>
+      <Col>
+        <div className="small-heading">PRODUCTS</div>
+        <ul>
+          <li>
+            <Link to="#">Personal Loans</Link>
+          </li>
+          <li>
+            <Link to="#">Mortgage Loans</Link>
+          </li>
+          <li>
+            <Link to="#">Reverse Mortgages</Link>
+          </li>
+          <li>
+            <Link to="#">Auto Loans</Link>
+          </li>
+          <li>
+            <Link to="#">Student Loans</Link>
+          </li>
+          <li>
+            <Link to="#">Credit Repair</Link>
+          </li>
+          <li>
+            <Link to="#">Debt Settlement</Link>
+          </li>
+        </ul>
+      </Col>
+      <Col>
+        <div className="small-heading">FIND US</div>
+        <Row>
+          <FontAwesomeIcon icon={faMapMarkerAlt} />
+          <a
+            href="https://goo.gl/maps/4rkXCUimJ8N5g78N6"
+            rel="noreferrer"
+            target="_blank"
+          >
+            6900 Tavistock Lakes Blvd Suite 400 Orlando, FL 32827
+          </a>
+        </Row>
+        <Row>
+          <FontAwesomeIcon icon={faPhoneAlt} />
+          <a href="tel:(407)638-8774" rel="noreferrer">
+            (407)638-8774
+          </a>
+        </Row>
+        <Row>
+          <FontAwesomeIcon icon={faEnvelope} />
+          <a href="mailto:info@championlender.com" rel="noreferrer">
+            info@championlender.com
+          </a>
+        </Row>
+        <Row>
+          <FontAwesomeIcon icon={faHistory} />
+          <p>
+            Mon-Fri: 9:00AM - 5:00PM
+            <br />
+            Sat-Sun: Closed
+          </p>
+        </Row>
+        <Row>
+          <a href="#" className="social-icon" rel="noreferrer" target="_blank">
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
+          <a href="#" className="social-icon" rel="noreferrer" target="_blank">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="#" className="social-icon" rel="noreferrer" target="_blank">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </Row>
+      </Col>
+    </StyledLinksBar>
+  )
 }

@@ -7,8 +7,8 @@ import styled from 'styled-components'
 const StyledFooterNav = styled.div`
   .row {
     justify-content: space-between;
-    margin: 0 200px;
-    padding-bottom: 50px;
+    margin: 0 100px;
+    padding: 0 50px 50px;
     border-bottom: 1px solid var(--light-gray-seperator);
 
     .logo-wrap {
@@ -23,39 +23,12 @@ const StyledFooterNav = styled.div`
     .nav-links {
       color: var(--white);
 
-      .small-heading {
-        text-transform: uppercase;
-        position: relative;
-        padding-bottom: 5px;
-        font-family: "Mulish"
-        font-weight: 400;
-        font-size: 16px;
-
-        :after {
-          content: '';
-          position: absolute;
-          width: 50px;
-          bottom: 0;
-          left: 0;
-          border-bottom: 3px solid var(--secondary-gold);
-        }
-      }
-
       ul {
         list-style: none;
         display: inline-flex;
-        padding-top: 20px;
         margin: 0;
 
         li {
-          font-family: 'Montserrat';
-          font-size: 15px;
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.6);
-
-          a {
-            color: rgba(255, 255, 255, 0.6);
-          }
           &:not(:last-child):after {
             content: '|';
             margin: 0 10px;
