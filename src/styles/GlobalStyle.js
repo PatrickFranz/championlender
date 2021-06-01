@@ -21,8 +21,10 @@ export const GlobalStyle = createGlobalStyle`
   --mobile_menu_toggle_color: #005f4f;
 
   --white: white;
+  --light-gray-seperator: rgba(229,229,229,.5);
 
-  --footer-background: #28303f;
+  --copyBar-background: #28303f;
+  --footer_bg_color: rgba(40,48,63,0.89);
   --copyright_text_color: rgba(255,255,255,0.4);
 
   --menu-glyph-color-hover: #a58c4f;

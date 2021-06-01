@@ -9,6 +9,7 @@ const StyledPartner = styled(BgImage)`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 50px auto;
   padding: 75px 0;
   justify-content: center;
   align-items: center;

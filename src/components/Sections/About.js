@@ -13,7 +13,7 @@ const StyledAboutSection = styled.div`
   @media (max-width: 1024px) {
     padding: 0 5px;
     align-items: center;
-    margin: 10px 5px;
+    margin: 50px 5px;
     gap: 20px;
   }
 
