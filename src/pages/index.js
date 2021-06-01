@@ -2,6 +2,7 @@ import * as React from 'react'
 import Heading from '../components/Heading'
 import Hero from '../components/Hero/hero'
 import HeroFooterBar from '../components/Hero/heroFooterBar'
+import ProductCarousel from '../components/ProductCarousel'
 import About from '../components/Sections/About'
 import Debt from '../components/Sections/Debt'
 import Homes from '../components/Sections/Homes'
@@ -26,6 +27,7 @@ const IndexPage = () => (
     <Process />
     <About />
     <PartnerUp />
+    <ProductCarousel />
   </>
 )
 
