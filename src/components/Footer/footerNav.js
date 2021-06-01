@@ -11,6 +11,12 @@ const StyledFooterNav = styled.div`
     padding: 0 50px 50px;
     border-bottom: 1px solid var(--light-gray-seperator);
 
+    @media (max-width: 900px) {
+      margin: 50px 10px 0;
+      padding: 0 10px 50px;
+      gap: 50px;
+    }
+
     .logo-wrap {
       display: flex;
       gap: 10px;
@@ -27,6 +33,10 @@ const StyledFooterNav = styled.div`
         list-style: none;
         display: inline-flex;
         margin: 0;
+
+        @media (max-width: 460px) {
+          display: inline-block;
+        }
 
         li {
           &:not(:last-child):after {

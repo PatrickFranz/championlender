@@ -23,9 +23,17 @@ const StyledLinksBar = styled.div`
   padding: 0 50px;
   font-family: 'Montserrat';
   font-size: 14px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    margin: 50px 10px 0;
+    padding: 0 10px;
+  }
 
   .col {
     padding: 10px;
+    flex-wrap: wrap;
+    min-width: 300px;
 
     .row {
       flex-wrap: nowrap;
