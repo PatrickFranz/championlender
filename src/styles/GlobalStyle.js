@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
   --white: white;
   --light-gray-seperator: rgba(229,229,229,.5);
+  --seafoam: #e8f9f6;
 
   --copyBar-background: #28303f;
   --footer_bg_color: rgba(40,48,63,0.89);

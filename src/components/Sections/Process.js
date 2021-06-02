@@ -3,10 +3,10 @@ import {
   faClipboard,
   faHandPointUp,
 } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
+import IconCard from '../Cards/IconCard'
 import Heading from '../Heading'
 
 const StyledProcessSection = styled.div`
@@ -43,74 +43,6 @@ const StyledProcessSection = styled.div`
   }
 `
 
-const StyledProcessCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 350px;
-  max-height: 400px;
-
-  .icon {
-    padding: 35px;
-    border: 10px solid var(--white);
-    border-radius: 50%;
-    background: #f3f3f3;
-    position: relative;
-
-    svg {
-      position: absolute;
-      font-size: 30px;
-      top: 30%;
-      left: 35%;
-      color: var(--secondary-gold);
-    }
-
-    .step {
-      position: absolute;
-      font-family: 'Montserrat';
-      top: -10px;
-      right: -5px;
-      color: var(--white);
-      background-color: var(--primary-green);
-      padding: 6px 8px;
-      border-radius: 50%;
-      font-size: 12px;
-      font-weight: 600;
-    }
-  }
-  .title {
-    font-family: 'Mulish';
-    font-weight: 700;
-    font-size: 22px;
-    text-transform: capitalize;
-  }
-
-  .text {
-    font-family: 'Montserrat';
-    font-size: 15px;
-    color: #666;
-    font-family: Montserrat;
-    font-weight: 400;
-    letter-spacing: 0px;
-    font-style: normal;
-  }
-`
-
-const ProcessCard = ({ icon, step, title, text }) => {
-  return (
-    <StyledProcessCard>
-      <div className="icon">
-        <FontAwesomeIcon icon={icon} />
-        <span className="step">{step}</span>
-      </div>
-      <div className="title">{title}</div>
-      <div className="text">{text}</div>
-    </StyledProcessCard>
-  )
-}
-
 export default function Process() {
   return (
     <StyledProcessSection>
@@ -119,7 +51,7 @@ export default function Process() {
         heading="How Champion Lender Works"
       />
       <div className="card-wrap">
-        <ProcessCard
+        <IconCard
           icon={faHandPointUp}
           title="Choose Your Loan Type"
           text="Whether you need a new home loan, refinance an existing loan, or help with your debt, Champion Lender is here to help you."
@@ -135,7 +67,7 @@ export default function Process() {
             objectPosition="absolute"
           />
         </div>
-        <ProcessCard
+        <IconCard
           icon={faClipboard}
           title="Answer A Few Questions"
           text="In under 2 minutes you can be on your way to getting the help you need. Our website is secure and protects your data."
@@ -152,7 +84,7 @@ export default function Process() {
             transformOptions={{ scaleY: -1 }}
           />
         </div>
-        <ProcessCard
+        <IconCard
           icon={faBalanceScaleLeft}
           title="Compare Rates & Terms"
           text="With one form you are able to compare rates and terms from multiple accredited lenders including Champion Lenders."

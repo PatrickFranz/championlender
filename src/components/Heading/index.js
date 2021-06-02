@@ -27,6 +27,13 @@ const StyledHeading = styled.div`
   .heading {
     font-family: 'Mulish';
     font-size: 42px;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+    @media (max-width: 425px) {
+      font-size: 26px;
+    }
   }
 
   .seperator {
