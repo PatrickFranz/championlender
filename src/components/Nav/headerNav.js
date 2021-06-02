@@ -37,13 +37,15 @@ export default function HeaderNav() {
           <div className="pri-nav">
             <Navbar expand="md" expanded={expanded}>
               <Navbar.Brand onClick={() => scrollTo('#home')}>
-                <StaticImage
-                  src="../../images/champion-logo.png"
-                  alt="Champion Group logo"
-                  placeholder="blurred"
-                  width={100}
-                  height={100}
-                />
+                <Link to="/">
+                  <StaticImage
+                    src="../../images/champion-logo.png"
+                    alt="Champion Group logo"
+                    placeholder="blurred"
+                    width={100}
+                    height={100}
+                  />
+                </Link>
               </Navbar.Brand>
               <Navbar.Toggle
                 aria-controls="basic-navbar-nav"
@@ -54,7 +56,7 @@ export default function HeaderNav() {
                   <Link
                     className="nav-link"
                     onClick={() => setExpanded(false)}
-                    to="/"
+                    to="/about"
                     activeClassName="active"
                   >
                     About
@@ -129,7 +131,7 @@ export default function HeaderNav() {
                   <Link
                     className="nav-link"
                     onClick={() => setExpanded(false)}
-                    to="/terms-of-use"
+                    to="/blog"
                     activeClassName="active"
                   >
                     Blog
@@ -137,7 +139,7 @@ export default function HeaderNav() {
                   <Link
                     className="nav-link"
                     onClick={() => setExpanded(false)}
-                    to="/terms-of-use"
+                    to="/partner"
                     activeClassName="active"
                   >
                     Partner with us
@@ -145,7 +147,7 @@ export default function HeaderNav() {
                   <Link
                     className="nav-link"
                     onClick={() => setExpanded(false)}
-                    to="/terms-of-use"
+                    to="/contact"
                     activeClassName="active"
                   >
                     Contact us

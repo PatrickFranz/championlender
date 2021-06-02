@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Champion Group website`,
-    description: `Champion Group Website for the group of Champion Companies.`,
+    title: `Champion Lender | Online Loans with No Credit Check in Orlando, FL`,
+    description: `Champion Lender is one of the top loan companies in Orlando, FL. Apply today and get lending offers with no credit check & lowest interest rates. Apply now`,
     author: `patrickfranz`,
   },
   plugins: [
