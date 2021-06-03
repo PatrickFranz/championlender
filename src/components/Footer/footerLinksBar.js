@@ -88,25 +88,25 @@ export default function FooterLinksBar() {
         <div className="small-heading">DISCLOSURES</div>
         <ul>
           <li>
-            <Link to="#">Definitions</Link>
+            <Link to="/">Definitions</Link>
           </li>
           <li>
-            <Link to="#">Terms of Service</Link>
+            <Link to="/">Terms of Service</Link>
           </li>
           <li>
-            <Link to="#">Advertising Disclosure</Link>
+            <Link to="/">Advertising Disclosure</Link>
           </li>
           <li>
-            <Link to="#">Privacy Policy</Link>
+            <Link to="/">Privacy Policy</Link>
           </li>
           <li>
-            <Link to="#">Unsubscribe</Link>
+            <Link to="/">Unsubscribe</Link>
           </li>
           <li>
-            <Link to="#">California Consumer Privacy Act</Link>
+            <Link to="/">California Consumer Privacy Act</Link>
           </li>
           <li>
-            <Link to="#">Premier Partners</Link>
+            <Link to="/">Premier Partners</Link>
           </li>
         </ul>
       </Col>
@@ -114,25 +114,25 @@ export default function FooterLinksBar() {
         <div className="small-heading">PRODUCTS</div>
         <ul>
           <li>
-            <Link to="#">Personal Loans</Link>
+            <Link to="/">Personal Loans</Link>
           </li>
           <li>
-            <Link to="#">Mortgage Loans</Link>
+            <Link to="/">Mortgage Loans</Link>
           </li>
           <li>
-            <Link to="#">Reverse Mortgages</Link>
+            <Link to="/">Reverse Mortgages</Link>
           </li>
           <li>
-            <Link to="#">Auto Loans</Link>
+            <Link to="/">Auto Loans</Link>
           </li>
           <li>
-            <Link to="#">Student Loans</Link>
+            <Link to="/">Student Loans</Link>
           </li>
           <li>
-            <Link to="#">Credit Repair</Link>
+            <Link to="/">Credit Repair</Link>
           </li>
           <li>
-            <Link to="#">Debt Settlement</Link>
+            <Link to="/">Debt Settlement</Link>
           </li>
         </ul>
       </Col>
@@ -169,13 +169,13 @@ export default function FooterLinksBar() {
           </p>
         </Row>
         <Row>
-          <a href="#" className="social-icon" rel="noreferrer" target="_blank">
+          <a href="/" className="social-icon" rel="noreferrer" target="_blank">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="#" className="social-icon" rel="noreferrer" target="_blank">
+          <a href="/" className="social-icon" rel="noreferrer" target="_blank">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="#" className="social-icon" rel="noreferrer" target="_blank">
+          <a href="/" className="social-icon" rel="noreferrer" target="_blank">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </Row>
