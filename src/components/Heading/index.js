@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledHeading = styled.div`
+const StyledHeading = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
