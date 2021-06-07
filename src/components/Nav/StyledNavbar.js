@@ -100,13 +100,23 @@ export const StyledNavbar = styled.div`
   .dropdown {
     .dropdown-menu {
       .dropdown-item {
+        background: white;
+
         .nav-link {
           font-family: 'Montserrat' !important;
           font-weight: 500;
-          color: var(--nav_typography-color);
-          .menu-glyph {
-            margin-right: 10px;
+          color: rgba(0, 0, 0, 0.5);
+
+          &.active {
+            font-weight: 600;
             color: var(--menu_hover_first_color);
+            .menu-glyph {
+              color: var(--menu_hover_first_color);
+            }
+          }
+          .menu-glyph {
+            color: var(--menu-glyph-color-hover);
+            margin-right: 10px;
           }
           &:hover .menu-glyph {
             color: var(--menu-glyph-color-hover);
@@ -117,6 +127,9 @@ export const StyledNavbar = styled.div`
   }
   #support-wrap {
     padding-right: 0;
+    &:hover {
+      text-decoration: none !important;
+    }
     .support-glyph {
       font-size: 35px;
       color: var(--menu_hover_first_color);

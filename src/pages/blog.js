@@ -25,7 +25,9 @@ export default function BlogPage() {
   return (
     <div>
       <Seo title={pageTitle} />
-      <PageBanner bgImage={getImage(bg)} title={pageTitle} />
+      <PageBanner bgImage={getImage(bg)}>
+        <h1 className="heading">{pageTitle}</h1>
+      </PageBanner>
     </div>
   )
 }

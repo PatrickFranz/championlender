@@ -114,7 +114,9 @@ export default function AboutPage() {
   return (
     <StyledAboutPage>
       <Seo title={pageTitle} />
-      <PageBanner bgImage={getImage(bg)} title={pageTitle} />
+      <PageBanner bgImage={getImage(bg)}>
+        <h1 className="heading">{pageTitle}</h1>
+      </PageBanner>
       <div className="about">
         <div className="about-img">
           <GatsbyImage image={getImage(aboutImg)} alt="" />

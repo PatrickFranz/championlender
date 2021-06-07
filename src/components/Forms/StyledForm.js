@@ -9,8 +9,6 @@ export const StyledFormWrapper = styled.div`
 `
 
 export const StyledForm = styled.form`
-  --invalid: #c0392b;
-
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   justify-content: center;

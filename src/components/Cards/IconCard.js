@@ -54,7 +54,6 @@ const StyledIconCard = styled.div`
     font-family: 'Montserrat';
     font-size: 15px;
     color: #666;
-    font-family: Montserrat;
     font-weight: 400;
     letter-spacing: 0px;
     font-style: normal;

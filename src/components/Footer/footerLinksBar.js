@@ -114,25 +114,16 @@ export default function FooterLinksBar() {
         <div className="small-heading">PRODUCTS</div>
         <ul>
           <li>
-            <Link to="/">Personal Loans</Link>
+            <Link to="/mortgage-loans">Mortgage Loans</Link>
           </li>
           <li>
-            <Link to="/">Mortgage Loans</Link>
+            <Link to="/reverse-mortgages">Reverse Mortgages</Link>
           </li>
           <li>
-            <Link to="/">Reverse Mortgages</Link>
+            <Link to="/credit-repair">Credit Repair</Link>
           </li>
           <li>
-            <Link to="/">Auto Loans</Link>
-          </li>
-          <li>
-            <Link to="/">Student Loans</Link>
-          </li>
-          <li>
-            <Link to="/">Credit Repair</Link>
-          </li>
-          <li>
-            <Link to="/">Debt Settlement</Link>
+            <Link to="/debt-settlement">Debt Settlement</Link>
           </li>
         </ul>
       </Col>

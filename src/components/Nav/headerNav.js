@@ -66,7 +66,7 @@ export default function HeaderNav() {
                       <Link
                         className="nav-link"
                         onClick={() => setExpanded(false)}
-                        to="/"
+                        to="/mortgage-loans"
                         activeClassName="active"
                       >
                         <span className="menu-glyph">
@@ -79,7 +79,7 @@ export default function HeaderNav() {
                       <Link
                         className="nav-link"
                         onClick={() => setExpanded(false)}
-                        to="/"
+                        to="/reverse-mortgages"
                         activeClassName="active"
                       >
                         <span className="menu-glyph">
@@ -88,7 +88,7 @@ export default function HeaderNav() {
                         Reverse Mortgage
                       </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item>
+                    {/* <NavDropdown.Item>
                       <Link
                         className="nav-link"
                         onClick={() => setExpanded(false)}
@@ -100,12 +100,12 @@ export default function HeaderNav() {
                         </span>
                         Home Search
                       </Link>
-                    </NavDropdown.Item>
+                    </NavDropdown.Item> */}
                     <NavDropdown.Item>
                       <Link
                         className="nav-link"
                         onClick={() => setExpanded(false)}
-                        to="/"
+                        to="/credit-repair"
                         activeClassName="active"
                       >
                         <span className="menu-glyph">
@@ -118,7 +118,7 @@ export default function HeaderNav() {
                       <Link
                         className="nav-link"
                         onClick={() => setExpanded(false)}
-                        to="/"
+                        to="/debt-settlement"
                         activeClassName="active"
                       >
                         <span className="menu-glyph">

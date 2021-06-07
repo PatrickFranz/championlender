@@ -24,6 +24,8 @@ export const GlobalStyle = createGlobalStyle`
   --light-gray-seperator: rgba(229,229,229,.5);
   --seafoam: #e8f9f6;
 
+  --invalid: #c0392b;
+
   --copyBar-background: #28303f;
   --footer_bg_color: rgba(40,48,63,0.89);
   --copyright_text_color: rgba(255,255,255,0.4);
@@ -70,6 +72,24 @@ h1, h2, h3, h4, h5, h6{
     bottom: 0;
     left: 0;
     border-bottom: 3px solid var(--secondary-gold);
+  }
+}
+
+.product-disclaimer{
+  background: var(--seafoam);
+  margin: 50px 0;
+  padding: 10px;
+
+  font-family: 'Montserrat';
+  font-size: 15px;
+  h6{
+    margin-bottom: 15px;
+  }
+  p{
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-style: normal;
   }
 }
 `

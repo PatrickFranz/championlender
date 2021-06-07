@@ -121,7 +121,9 @@ export default function ContactPage() {
   return (
     <StyledContactPage>
       <Seo title={pageTitle} />
-      <PageBanner bgImage={getImage(bg)} title={pageTitle} />
+      <PageBanner bgImage={getImage(bg)}>
+        <h1 className="heading">{pageTitle}</h1>
+      </PageBanner>
       <Row className="two-col">
         <StyledGetInTouch>
           <Heading
