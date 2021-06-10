@@ -6,6 +6,7 @@ import HeaderNav from './Nav/headerNav'
 const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `
 
 const Layout = ({ children }) => {

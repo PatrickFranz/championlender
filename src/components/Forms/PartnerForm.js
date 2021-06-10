@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { validateEmail, validatePhone } from '../../util/utils'
 import Button from '../Buttons/button'
 import { Spinner } from 'react-bootstrap'
+import { navigate } from 'gatsby-link'
 
 export default function PartnerForm() {
   const [isSubmit, setSubmit] = useState(false)
@@ -29,9 +30,6 @@ export default function PartnerForm() {
   } = useForm()
 
   const onSubmit = (data, ev) => {
-    console.log('submitting...')
-    console.log(data, ev)
-
     setSubmit(true)
     fetch('/', {
       method: 'POST',
@@ -43,7 +41,7 @@ export default function PartnerForm() {
     })
       .then(() => {
         setSubmit(false)
-        console.log('Submitted successfully')
+        navigate('/thank-you')
       })
       .catch(error => alert(error))
   }

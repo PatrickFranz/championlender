@@ -94,12 +94,12 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .content-wrap{
-  margin: 50px 100px;
-  padding: 10px;
+  padding: 50px 100px;
+ 
 
   @media(max-width: 768px){
-  margin: 50px 10px;
-  padding: 10px;
+  padding: 50px 10px;
+ 
 
   }
 }

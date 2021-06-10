@@ -6,6 +6,7 @@ import Button from '../Buttons/button'
 import { Spinner } from 'react-bootstrap'
 import Heading from '../Heading'
 import styled from 'styled-components'
+import { navigate } from 'gatsby-link'
 
 const StyledFormWrapper = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ export default function ConactForm() {
     })
       .then(() => {
         setSubmit(false)
-        console.log('Submitted successfully')
+        navigate('/thank-you')
       })
       .catch(error => alert(error))
   }

@@ -8,9 +8,7 @@ import Heading from '../components/Heading'
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import {
-  faCommentDollar,
   faMedal,
-  faMoneyCheck,
   faQuestion,
   faSearchDollar,
   faThumbsUp,
