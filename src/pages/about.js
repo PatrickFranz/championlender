@@ -11,7 +11,9 @@ import {
   faCommentDollar,
   faMedal,
   faMoneyCheck,
+  faQuestion,
   faSearchDollar,
+  faThumbsUp,
 } from '@fortawesome/free-solid-svg-icons'
 import IconCard from '../components/Cards/IconCard'
 import { Col, Row } from 'react-bootstrap'
@@ -130,21 +132,24 @@ export default function AboutPage() {
             margin="0 auto"
           />
           <p className="first">
-            We understand how complicated it is to pick the right lender for
-            your loan needs. That’s why we simplified the process of finding a
-            lender to get the money you need. You no longer have to visit dozens
-            of websites, fill out numerous requests or stand in line at a local
-            store. If we cannot help you with your loan in house, we will submit
-            your information through our secure form to one of the participating
-            lenders in our network that meet the same quality and security
-            standards and guidelines we’ve set. The lenders we work with are
-            willing to help you get the money you need. Each lender in our
-            network has made the loan decision process quick and simple, and a
-            loan agreement that you can review and sign online in most cases.
+            We understand how complicated and fragmented it is to pick the right
+            lender for your home loan needs. We also understand how confusing it
+            can be to go through the refinance or home buying process. That’s
+            why we created Champion Lender. We give you the valuable tools you
+            need to remove the traditional barriers to home ownership. We
+            simplified the process of finding a lender to get the money you
+            need. You no longer have to visit dozens of websites, fill out
+            numerous requests or stand in line at a local branch. If we cannot
+            help you with your loan in house, we will submit your information
+            through our secure form to one of the participating lenders in our
+            network that meet the same quality and security standards and
+            guidelines we’ve set. The lenders we work with are willing to help
+            you . Each lender in our network has made the loan decision process
+            quick and simple.
           </p>
           <p>
-            We look forward to helping you with your personal lending needs. Let
-            us be your Champion.
+            We look forward to helping you with your Home lending needs. Let us
+            be your Champion.
           </p>
         </div>
       </div>
@@ -164,8 +169,8 @@ export default function AboutPage() {
               <div className="card-frame">
                 <IconCard
                   icon={faMedal}
-                  title="What do I hope to accomplish?"
-                  text="If you want to consolidate or refinance existing debt, for example, then it is important that your new loan is at a lower interest rate than your current loan(s) so you save money in the long run. If you are shopping for a new loan, you will want to make sure the payments on your new loan are affordable."
+                  title="How do I choose the right lender?"
+                  text="It all starts with our Affordability Calculator. Just fill out some basic information and we will be able to tell you how much you qualify for. Once we have that information we will give you a few options that are right for your profile, yes even if it’s not with us. We partner with hundreds of lenders that can service your loan that are held to the same Champion Standards."
                   background="var(--white)"
                   borderColor="var(--primary-green)"
                   width="500px"
@@ -174,8 +179,8 @@ export default function AboutPage() {
               <div className="card-frame">
                 <IconCard
                   icon={faSearchDollar}
-                  title="How much will it cost?"
-                  text="Compare interest rates, but don’t forget to check out fees as well. Also make sure you are comparing loans of a similar length. With a car loan, for example, the shorter the term, the lower the interest rate."
+                  title="What if I don't have the credit?"
+                  text="It’s a good idea to check your credit score before you apply so you’ll have an idea where you stand.  With <a href='https://www.credit.com'>Credit.com’s</a> Free Credit Report Card, you will get your credit score for free. We can help you analyze your credit and give you the exact steps you need to take to improve your credit enough to qualify for a home loan. We provide you a credit road map and help you along the way. We also partnered with experts in credit repair and debt settlement to guide you along the way."
                   background="var(--white)"
                   borderColor="var(--primary-green)"
                   width="500px"
@@ -185,10 +190,9 @@ export default function AboutPage() {
             <Row>
               <div className="card-frame">
                 <IconCard
-                  icon={faCommentDollar}
-                  title="How will I pay it off?"
-                  text="Before you borrow, make sure your payment is affordable and that you have room in your budget to make that payment each month.
-            Typically, unsecured loans (such as personal loans and debt consolidation loans) carry higher interest rates than secured loans (such as car or mortgage loans). The interest rate you’ll pay will depend in part on your credit scores. But that doesn’t mean you can’t get a loan if you have poor credit. Some lenders offer financing to consumers with bad credit, though the interest rate will be higher."
+                  icon={faQuestion}
+                  title="Home Buying is Confusing."
+                  text="We believe the biggest pain point to home ownership or refinancing is knowledge. The time to learn is NOT in the middle of the process but BEFORE! We’ve created a library of Common Definitions and Frequently Asked Questions to give you as much information as possible. If you cannot find what you are looking for using those resources, do not worry you can Chat with an Expert via Chat or phone call to answer any and all of your questions. No Obligation Necessary! Our goal is to get you as knowledgeable and prepared prior to purchasing a home or refinancing your existing home."
                   background="var(--white)"
                   borderColor="var(--primary-green)"
                   width="500px"
@@ -196,10 +200,9 @@ export default function AboutPage() {
               </div>
               <div className="card-frame">
                 <IconCard
-                  icon={faMoneyCheck}
-                  title="What is my credit score?"
-                  text="It’s a good idea to check your credit score before you apply so you’ll have an idea where you stand. Then try to avoid applying for loans you aren’t likely to get. With Credit.com’s Free Credit Report Card, you will get your credit score for free, and be matched with offers from lenders.
-                  Once you get you get your loan, make sure you make your payments on time to avoid late fees and to keep your credit rating strong."
+                  icon={faThumbsUp}
+                  title="I got my pre-approval. How can I find a home?"
+                  text="Congrats on your pre-approval! In today’s market most Real Estate agents require you to have a pre-approval letter before they start showing you homes. In the same way we partner with lenders if we cannot service your loan in house, we’ve partnered with hundreds of real estate agents. We will present you a few options of real estate agents that meet our Champion Standards to help you find the home of your dreams and within your budget. Simply choose the agent that feels right for you. We work hand and hand with our agents to make sure this process is as smooth as possible for you."
                   background="var(--white)"
                   borderColor="var(--primary-green)"
                   width="500px"

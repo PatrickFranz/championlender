@@ -87,26 +87,26 @@ export default function FooterLinksBar() {
       <Col>
         <div className="small-heading">DISCLOSURES</div>
         <ul>
-          <li>
+          {/* <li>
             <Link to="/">Definitions</Link>
+          </li> */}
+          <li>
+            <Link to="/tos">Terms of Service</Link>
           </li>
           <li>
-            <Link to="/">Terms of Service</Link>
+            <Link to="/advertising-disclosure">Advertising Disclosure</Link>
           </li>
           <li>
-            <Link to="/">Advertising Disclosure</Link>
+            <Link to="/privacy">Privacy Policy</Link>
           </li>
-          <li>
-            <Link to="/">Privacy Policy</Link>
-          </li>
-          <li>
+          {/* <li>
             <Link to="/">Unsubscribe</Link>
+          </li> */}
+          <li>
+            <Link to="/ccpa">California Consumer Privacy Act</Link>
           </li>
           <li>
-            <Link to="/">California Consumer Privacy Act</Link>
-          </li>
-          <li>
-            <Link to="/">Premier Partners</Link>
+            <Link to="/premier-partners">Premier Partners</Link>
           </li>
         </ul>
       </Col>
@@ -160,13 +160,28 @@ export default function FooterLinksBar() {
           </p>
         </Row>
         <Row>
-          <a href="/" className="social-icon" rel="noreferrer" target="_blank">
+          <a
+            href="https://www.facebook.com/championlenders"
+            className="social-icon"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="/" className="social-icon" rel="noreferrer" target="_blank">
+          <a
+            href="/https://www.instagram.com/championlender/"
+            className="social-icon"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="/" className="social-icon" rel="noreferrer" target="_blank">
+          <a
+            href="/https://www.linkedin.com/company/champion-lender/about/"
+            className="social-icon"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </Row>

@@ -92,4 +92,15 @@ h1, h2, h3, h4, h5, h6{
     font-style: normal;
   }
 }
+
+.content-wrap{
+  margin: 50px 100px;
+  padding: 10px;
+
+  @media(max-width: 768px){
+  margin: 50px 10px;
+  padding: 10px;
+
+  }
+}
 `
