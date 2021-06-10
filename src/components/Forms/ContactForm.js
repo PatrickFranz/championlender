@@ -37,6 +37,7 @@ export default function ConactForm() {
     handleSubmit,
     formState: { errors },
   } = useForm()
+
   const onSubmit = (data, ev) => {
     console.log('submitting...')
     setSubmit(true)
@@ -138,6 +139,7 @@ export default function ConactForm() {
             rows="2"
             className="input-field"
             onInput={handleInput}
+            {...register('comments')}
           />
           <label htmlFor="comments">Message</label>
         </div>

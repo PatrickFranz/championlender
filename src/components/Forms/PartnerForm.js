@@ -133,6 +133,7 @@ export default function PartnerForm() {
             name="title"
             id="title"
             className="input-field"
+            {...register('title')}
             onInput={handleInput}
           />
           <label htmlFor="title">Title</label>
@@ -142,6 +143,7 @@ export default function PartnerForm() {
             type="select"
             name="industry"
             id="industry"
+            {...register('industry')}
             className="input-field"
             onInput={handleInput}
           >
@@ -163,6 +165,7 @@ export default function PartnerForm() {
             rows="2"
             name="comments"
             id="comments"
+            {...register('comments')}
             className="input-field"
             onInput={handleInput}
           />
