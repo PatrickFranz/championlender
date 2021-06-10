@@ -53,11 +53,16 @@ export default function ConactForm() {
         align="left"
         margin="20px 0 50px"
       />
-      <StyledForm onSubmit={handleSubmit(onSubmit)} netlify name="contact-form">
+      <StyledForm
+        onSubmit={handleSubmit(onSubmit)}
+        data-netlify="true"
+        name="contact-form"
+      >
         <input type="hidden" name="form-name" value="contact-form" />
         <div className="wrap-input">
           <input
             id="first_name"
+            name="first_name"
             className="input-field"
             {...register('first_name', { required: '* Required' })}
             type="text"
@@ -73,6 +78,7 @@ export default function ConactForm() {
         <div className="wrap-input">
           <input
             id="last_name"
+            name="last_name"
             className="input-field"
             {...register('last_name', { required: '* Required' })}
             type="text"
@@ -108,9 +114,9 @@ export default function ConactForm() {
 
         <div className="wrap-input">
           <input
-            type="phone"
-            name="phone"
             id="phone"
+            name="phone"
+            type="phone"
             className="input-field"
             onInput={handleInput}
             {...register('phone', {
@@ -127,9 +133,9 @@ export default function ConactForm() {
 
         <div className="wrap-input span-all">
           <textarea
-            rows="2"
-            name="comments"
             id="comments"
+            name="comments"
+            rows="2"
             className="input-field"
             onInput={handleInput}
           />

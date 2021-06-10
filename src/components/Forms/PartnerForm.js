@@ -49,7 +49,11 @@ export default function PartnerForm() {
   }
   return (
     <StyledFormWrapper>
-      <StyledForm onSubmit={handleSubmit(onSubmit)} netlify name="partner-form">
+      <StyledForm
+        onSubmit={handleSubmit(onSubmit)}
+        data-netlify="true"
+        name="partner-form"
+      >
         <input type="hidden" name="form-name" value="partner-form" />
         <div className="wrap-input">
           <input
