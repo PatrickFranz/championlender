@@ -26,6 +26,12 @@ export default function ConactForm() {
     })
   }, [])
 
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
   const {
     register,
     handleSubmit,
@@ -47,7 +53,8 @@ export default function ConactForm() {
         align="left"
         margin="20px 0 50px"
       />
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
+      <StyledForm onSubmit={handleSubmit(onSubmit)} netlify name="contact-form">
+        <input type="hidden" name="form-name" value="contact-form" />
         <div className="wrap-input">
           <input
             id="first_name"

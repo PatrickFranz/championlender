@@ -16,22 +16,41 @@ export default function PartnerForm() {
     })
   }, [])
 
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
+
   const onSubmit = (data, ev) => {
     console.log('submitting...')
     setSubmit(true)
-    setTimeout(() => {
-      console.log(data, ev)
-      setSubmit(false)
-    }, 1000)
+
+    console.log(data, ev)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': ev.target.getAttribute('name'),
+        ...data,
+      }),
+    })
+      .then(() => {
+        setSubmit(false)
+        console.log('Submitted successfully')
+      })
+      .catch(error => alert(error))
   }
   return (
     <StyledFormWrapper>
-      <StyledForm onSubmit={handleSubmit(onSubmit)}>
+      <StyledForm onSubmit={handleSubmit(onSubmit)} netlify name="partner-form">
+        <input type="hidden" name="form-name" value="partner-form" />
         <div className="wrap-input">
           <input
             id="full_name"
