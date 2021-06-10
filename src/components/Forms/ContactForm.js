@@ -41,10 +41,19 @@ export default function ConactForm() {
   const onSubmit = (data, ev) => {
     console.log('submitting...')
     setSubmit(true)
-    setTimeout(() => {
-      console.log(data, ev)
-      setSubmit(false)
-    }, 1000)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': ev.target.getAttribute('name'),
+        ...data,
+      }),
+    })
+      .then(() => {
+        setSubmit(false)
+        console.log('Submitted successfully')
+      })
+      .catch(error => alert(error))
   }
   return (
     <StyledFormWrapper>
@@ -59,7 +68,12 @@ export default function ConactForm() {
         data-netlify="true"
         name="contact-form"
       >
-        <input type="hidden" name="form-name" value="contact-form" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="contact-form"
+          {...register('form-name')}
+        />
         <div className="wrap-input">
           <input
             id="first_name"

@@ -30,9 +30,9 @@ export default function PartnerForm() {
 
   const onSubmit = (data, ev) => {
     console.log('submitting...')
-    setSubmit(true)
-
     console.log(data, ev)
+
+    setSubmit(true)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -54,7 +54,12 @@ export default function PartnerForm() {
         data-netlify="true"
         name="partner-form"
       >
-        <input type="hidden" name="form-name" value="partner-form" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="partner-form"
+          {...register('form-name')}
+        />
         <div className="wrap-input">
           <input
             id="full_name"
