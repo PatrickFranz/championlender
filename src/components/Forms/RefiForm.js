@@ -1,4 +1,5 @@
 import React, { createRef, useEffect, useState } from 'react'
+import { navigate } from 'gatsby-link'
 import { Col, Container, Row, ProgressBar } from 'react-bootstrap'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
@@ -8,7 +9,6 @@ import Heading from '../Heading'
 import { StyledStepForm } from './StyledStepForm'
 import Button from '../Buttons/button'
 import { useRef } from 'react'
-import { leadId } from '../../util/utils'
 
 const StyledFormWrapper = styled.div`
   display: flex;
@@ -45,7 +45,7 @@ const StyledStepBar = styled.div`
     background-color: var(--primary-green);
   }
 `
-leadId()
+
 const handleCheckbox = element => {
   element.target.checked
     ? (element.target.value = 'yes')
@@ -87,10 +87,9 @@ export default function RefiForm() {
   const onSubmit = (data, e) => {
     setSubmit(true)
     setTimeout(() => {
-      formRef.current.submit()
-      console.log('Submitting: ', data)
       setSubmit(false)
-    }, 4000)
+      navigate('/thank-you')
+    }, 1500)
   }
 
   const validateField = e => {

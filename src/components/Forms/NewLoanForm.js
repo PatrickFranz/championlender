@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row, Spinner } from 'react-bootstrap'
+import { navigate } from 'gatsby-link'
+import { Col, Container, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
 import { validateEmail, validatePhone } from '../../util/utils'
@@ -7,7 +8,6 @@ import { handleInput } from './StyledForm'
 import Heading from '../Heading'
 import { StyledStepForm } from './StyledStepForm'
 import Button from '../Buttons/button'
-import RadioButton from '../Buttons/RadioButton'
 
 const StyledFormWrapper = styled.div`
   display: flex;
@@ -76,8 +76,9 @@ export default function NewLoanForm() {
     setSubmit(true)
     setTimeout(() => {
       // formRef.current.submit()
-      console.log(data)
-    }, 500)
+      setSubmit(false)
+      navigate('/thank-you')
+    }, 1500)
   }
 
   useEffect(() => {
@@ -1260,7 +1261,7 @@ export default function NewLoanForm() {
               value=""
               {...register('PROP_ST')}
             />
-            <pre>{JSON.stringify(watchData, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(watchData, null, 2)}</pre> */}
           </div>
         </StyledStepForm>
       </Container>

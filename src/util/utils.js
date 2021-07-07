@@ -7,13 +7,7 @@ export function validateEmail(email) {
 export async function validatePhone(phone) {
   //eslint-disable-next-line
   const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-  if (re.test(phone)) {
-    return await checkPhone(phone).then(res => {
-      return res.status !== 404
-    })
-  } else {
-    return false
-  }
+  return re.test(phone)
 }
 
 export async function checkPhone(phone) {

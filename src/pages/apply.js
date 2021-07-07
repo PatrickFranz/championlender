@@ -1,13 +1,12 @@
-import { graphql, Link, useStaticQuery, withPrefix } from 'gatsby'
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
-import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 import PageBanner from '../components/PageBanner/PageBanner'
 import RefiForm from '../components/Forms/RefiForm'
 import Seo from '../components/seo'
 import NewLoanForm from '../components/Forms/NewLoanForm'
-import { useScript } from '../util/hooks'
 
 const StyledApplyPage = styled.div``
 
