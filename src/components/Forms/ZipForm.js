@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Spinner } from 'react-bootstrap'
+import { navigate } from 'gatsby-link'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import styled from 'styled-components'
 import Button from '../Buttons/button'
@@ -27,8 +27,8 @@ const StyledZipForm = styled.form`
     }
   }
   .button-bar {
-    align-items: center;
-    margin: auto;
+    display: flex;
+    justify-content: space-between;
   }
   .invalid {
     color: var(--invalid);
@@ -37,21 +37,19 @@ const StyledZipForm = styled.form`
 `
 
 export default function ZipForm() {
-  const [isSubmit, setSubmit] = useState(false)
-
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm()
 
   const onSubmit = (data, ev) => {
     console.log('submitting...')
-    setSubmit(true)
+
     setTimeout(() => {
-      console.log(data, ev)
-      setSubmit(false)
-    }, 1000)
+      navigate(`/apply?zip=${watch('zipCode')}&application=${ev.target.id}`)
+    }, 500)
   }
   return (
     <StyledZipForm onSubmit={handleSubmit(onSubmit)}>
@@ -66,21 +64,23 @@ export default function ZipForm() {
         <input
           id="zipCode"
           className="input-field"
-          {...register('zipCode', { required: '* Required' })}
+          {...register('zipCode', {
+            required: '* Required',
+            pattern: {
+              value: /^[0-9]{5}(?:-[0-9]{4})?$/,
+              message: 'Not a valid Zip',
+            },
+            maxLength: { value: 5, message: 'Not a valid Zip' },
+          })}
           type="text"
         />
       </div>
       <div className="button-bar">
-        <Button type="submit">
-          {isSubmit && (
-            <Spinner
-              animation="border"
-              variant="light"
-              size="sm"
-              role="status"
-            />
-          )}
-          Continue
+        <Button id="refi" type="button" handleClick={handleSubmit(onSubmit)}>
+          Refinance Existing Loan
+        </Button>
+        <Button id="new" type="button" handleClick={handleSubmit(onSubmit)}>
+          Apply For New Loan
         </Button>
       </div>
     </StyledZipForm>

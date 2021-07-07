@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
 //Usage:
 //   const size = useWindowSize();
@@ -18,11 +18,11 @@ export function useWindowSize() {
       })
     }
     // Add event listener
-    window.addEventListener("resize", handleResize)
+    window.addEventListener('resize', handleResize)
     // Call handler right away so state gets updated with initial window size
     handleResize()
     // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, []) // Empty array ensures that effect is only run on mount
   return windowSize
 }
@@ -30,18 +30,18 @@ export function useWindowSize() {
 // Call a plain ol Javascript script
 export function useScript(url, ident) {
   useEffect(() => {
-    const script = document.createElement("script")
+    const script = document.createElement('script')
     script.id = ident
     script.src = url
     script.async = true
-    script.type = "text/javascript"
+    script.type = 'text/javascript'
 
-    const LeadiDscript = document.getElementById("LeadiDscript")
+    const LeadiDscript = document.getElementById('LeadiDscript')
     LeadiDscript.parentNode.insertBefore(script, LeadiDscript)
     document.body.appendChild(script)
 
     return () => {
       document.body.removeChild(script)
     }
-  }, [url])
+  }, [url, ident])
 }

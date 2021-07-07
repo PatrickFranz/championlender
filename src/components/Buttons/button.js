@@ -54,7 +54,7 @@ const StyledButton = styled.button`
 }
 `
 
-export default function Button({ children, type, text, handleClick }) {
+export default function Button({ id, children, type, text, handleClick }) {
   const buttonRef = useRef()
   useEffect(() => {
     const el = buttonRef.current
@@ -73,10 +73,11 @@ export default function Button({ children, type, text, handleClick }) {
   }, [])
   return (
     <StyledButton
+      id={id}
       ref={buttonRef}
       type={type}
       role="button"
-      onClick={() => handleClick}
+      onClick={handleClick}
     >
       {children}
       {text}

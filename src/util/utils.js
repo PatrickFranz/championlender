@@ -30,11 +30,13 @@ export async function checkPhone(phone) {
 }
 
 export function leadId() {
-  const s = document.createElement('script')
-  s.id = 'LeadiDscript_campaign'
-  s.type = 'text/javascript'
-  s.async = true
-  s.src =
-    '//create.lidstatic.com/campaign/7d5a73f4-d32d-c39a-6745-b920c70d0d53.js?snippet_version=2'
-  document.head.appendChild(s)
+  if (!document.getElementById('LeadiDscript_campaign')) {
+    const s = document.createElement('script')
+    s.id = 'LeadiDscript_campaign'
+    s.type = 'text/javascript'
+    s.async = true
+    s.src =
+      '//create.lidstatic.com/campaign/cd215e19-865f-3649-c858-0b6646c7cfa9.js?snippet_version=2'
+    document.head.appendChild(s)
+  }
 }

@@ -8,9 +8,8 @@ export const StyledFormWrapper = styled.div`
   width: 100%;
 `
 
-export const StyledForm = styled.form`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+export const StyledStepForm = styled.form`
+  display: flex;
   justify-content: center;
   font-size: 1.25rem;
   font-family: 'Montserrat', sans-serif;
@@ -32,11 +31,17 @@ export const StyledForm = styled.form`
     grid-template-columns: 50px 1fr;
     grid-column: 1/-1;
 
+    p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
     label {
       text-transform: none;
       top: -5px;
       font-size: 0.8rem;
       font-weight: normal;
+      color: red;
     }
   }
 
@@ -44,7 +49,12 @@ export const StyledForm = styled.form`
     grid-column: 1/-1;
     margin-bottom: 2rem;
   }
-
+  .centered {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
   label :not(.static) {
     position: relative;
     top: -50%;
@@ -68,10 +78,9 @@ export const StyledForm = styled.form`
     }
   }
 
-  input,
+  input :not([type='checkbox']),
   select,
-  textarea,
-  :not(input[type='radio']) {
+  textarea {
     position: relative;
     border: none;
     width: 100%;
@@ -86,7 +95,8 @@ export const StyledForm = styled.form`
       outline: none;
       border-bottom: 2px solid var(--secondary-gold);
     }
-    &:focus ~ label :not(.tcpa-label):not(.static) {
+    &:focus ~ label :not(.tcpa-label) :not(.static),
+    &:focus ~ label :not(input[type='radio']) {
       top: -100%;
       color: var(--black);
     }
@@ -105,7 +115,7 @@ export const StyledForm = styled.form`
   textarea,
   input {
     transition: all 500ms ease;
-    &:focus label {
+    &:focus label :not(.static) {
       top: -100%;
       color: var(--black);
     }
@@ -120,14 +130,8 @@ export const StyledForm = styled.form`
   }
 
   .step {
-    display: flex;
+    min-width: 60vw;
+    padding: 50px 100px;
+    background-color: var(--seafoam);
   }
 `
-export const handleInput = e => {
-  console.log('handleInput: ', e)
-  if (e.target.value) {
-    e.target.labels[0].style.top = '-100%'
-  } else {
-    e.target.labels[0].style.top = '-50%'
-  }
-}
