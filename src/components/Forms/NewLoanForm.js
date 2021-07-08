@@ -45,10 +45,6 @@ const handleCheckbox = element => {
     : (element.target.value = 'no')
 }
 
-const getAfid = () => {
-  return window.location.href.split('AFID=')[1] || '465368'
-}
-
 export default function NewLoanForm() {
   const [isSubmit, setSubmit] = useState(false)
   const [currentStep, setCurrentStep] = useState(1)

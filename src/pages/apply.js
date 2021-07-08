@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 import { Col, Row } from 'react-bootstrap'
 import styled from 'styled-components'
+import { useLocation } from '@reach/router'
 import PageBanner from '../components/PageBanner/PageBanner'
 import RefiForm from '../components/Forms/RefiForm'
 import Seo from '../components/seo'
@@ -13,7 +14,7 @@ const StyledApplyPage = styled.div``
 export default function ApplyPage() {
   const pageTitle = 'Mortgage Loans'
 
-  const application = new URLSearchParams(window.location.search).get(
+  const application = new URLSearchParams(useLocation().search).get(
     'application'
   )
 
@@ -31,7 +32,6 @@ export default function ApplyPage() {
       }
     }
   `)
-  console.log(application)
   return (
     <StyledApplyPage>
       <Seo title={pageTitle} />

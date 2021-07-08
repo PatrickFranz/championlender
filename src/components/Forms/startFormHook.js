@@ -18,10 +18,6 @@ const handleCheckbox = element => {
     : (element.target.value = 'no')
 }
 
-const getAfid = () => {
-  return window.location.href.split('AFID=')[1] || '465368'
-}
-
 const formRef = createRef()
 
 export default function StartFormHook() {
